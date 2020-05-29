@@ -1,9 +1,9 @@
 # https://pkgs.alpinelinux.org/packages?name=obfs4proxy&arch=x86_64
-FROM alpine:3.10
+FROM alpine:3.11
 
 RUN adduser -S onion \
-    && apk add --no-cache tor=~0.3.5.8 \
-    && apk add --no-cache obfs4proxy=~0.0.7 \
+    && apk add --no-cache tor=0.4.1.9-r1 \
+    && apk add --no-cache obfs4proxy=0.0.11-r1 \
         --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing
 
 ENV OR_PORT=
