@@ -18,6 +18,12 @@ docker run --name tor_obfs4_bridge \
     fphammerle/tor-obfs4-bridge
 ```
 
+add `-v tor_obfs4_bridge_data:/var/lib/tor` to keep server's identity key
+when restarting the container
+
+additionally add `--read-only --tmpfs /tmp:rw,size=4k`
+to make the container's root filesystem read only
+
 verify status of bridge at  https://metrics.torproject.org/rs.html
 
 ## further reading

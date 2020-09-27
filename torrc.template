@@ -1,5 +1,8 @@
 Log notice stdout
 
+# default: ~/.tor
+DataDirectory /var/lib/tor
+
 # disable socks proxy
 SOCKSPort 0
 

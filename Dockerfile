@@ -3,8 +3,7 @@ FROM alpine:3.12
 
 ARG TOR_PACKAGE_VERSION=0.4.3.5-r0
 ARG OBFS4PROXY_PACKAGE_VERSION=0.0.11-r2
-RUN adduser -S onion \
-    && apk add --no-cache tor=$TOR_PACKAGE_VERSION \
+RUN apk add --no-cache tor=$TOR_PACKAGE_VERSION \
     && apk add --no-cache obfs4proxy=$OBFS4PROXY_PACKAGE_VERSION \
         --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing
 
@@ -21,6 +20,6 @@ COPY torrc.template entrypoint.sh /
 RUN chmod -c a+rX /torrc.template /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
-USER onion
-
+USER tor
+VOLUME /var/lib/tor
 CMD ["tor", "-f", "/tmp/torrc"]
