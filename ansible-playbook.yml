@@ -7,8 +7,9 @@
   tasks:
   - docker_container:
       name: tor_obfs4_bridge
-      # TODO replace tag with fingerprint
-      image: fphammerle/tor-obfs4-bridge:1.0.0-tor0.4.3.5-obfs4proxy0.0.11-amd64
+      # object 4b36399ceca223c76549c08dd482de4ef6b8e3a0
+      # tag docker/1.0.0-tor0.4.3.5-obfs4proxy0.0.11-amd64
+      image: docker.io/fphammerle/tor-obfs4-bridge@sha256:88224efd53e6aa7a357a683537321e788bca3387ccff743075c00a225a1273de
       env:
         OR_PORT: '{{ or_port }}'
         PT_PORT: '{{ pt_port }}'
