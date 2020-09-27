@@ -15,7 +15,7 @@
         PT_PORT: '{{ pt_port }}'
         CONTACT_INFO: '{{ contact_info }}'
       volumes:
-      - tor_obfs4_bridge:/var/lib/tor
+      - tor_obfs4_bridge_data:/var/lib/tor
       mounts:
       - type: tmpfs
         target: /tmp # torrc
@@ -26,5 +26,7 @@
       ports:
       - '{{ or_port }}:{{ or_port }}'
       - '{{ pt_port }}:{{ pt_port }}'
+      cap_drop: [ALL]
+      security_opts: [no-new-privileges]
       memory: 256M
       restart_policy: unless-stopped
