@@ -1,6 +1,6 @@
 # docker: tor obfs4 bridge 🐳
 
-Tor bridge running obfs4 obfuscation protocol in Alpine
+Tor bridge running obfs4 obfuscation protocol on Alpine
 
 Alpine port of https://dip.torproject.org/torproject/anti-censorship/docker-obfs4-bridge
 
@@ -17,6 +17,8 @@ docker run --name tor_obfs4_bridge \
     -e CONTACT_INFO=admin@optional.com \
     fphammerle/tor-obfs4-bridge
 ```
+
+verify status of bridge at  https://metrics.torproject.org/rs.html
 
 ## further reading
 
