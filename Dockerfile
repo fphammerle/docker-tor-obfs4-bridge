@@ -23,3 +23,9 @@ ENTRYPOINT ["/entrypoint.sh"]
 USER tor
 VOLUME /var/lib/tor
 CMD ["tor", "-f", "/tmp/torrc"]
+
+# https://github.com/opencontainers/image-spec/blob/v1.0.1/annotations.md
+ARG REVISION=
+LABEL org.opencontainers.image.title="tor bridge providing obfs4 obfuscation protocol" \
+    org.opencontainers.image.source="https://github.com/fphammerle/docker-tor-obfs4-bridge" \
+    org.opencontainers.image.revision="$REVISION"
