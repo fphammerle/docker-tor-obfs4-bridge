@@ -1,7 +1,7 @@
 # https://pkgs.alpinelinux.org/packages?name=obfs4proxy&arch=x86_64
 FROM alpine:3.14.1
 
-ARG TOR_PACKAGE_VERSION=0.4.5.9-r0
+ARG TOR_PACKAGE_VERSION=0.4.5.10-r0
 ARG OBFS4PROXY_PACKAGE_VERSION=0.0.11-r3
 RUN apk add --no-cache tor=$TOR_PACKAGE_VERSION \
     && apk add --no-cache obfs4proxy=$OBFS4PROXY_PACKAGE_VERSION \
