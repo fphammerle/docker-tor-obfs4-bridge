@@ -1,5 +1,5 @@
 # https://pkgs.alpinelinux.org/packages?name=obfs4proxy&arch=x86_64
-FROM docker.io/alpine:3.17.3
+FROM docker.io/alpine:3.18.0
 
 ARG TOR_PACKAGE_VERSION=0.4.7.13-r1
 ARG OBFS4PROXY_PACKAGE_VERSION=0.0.14-r7
