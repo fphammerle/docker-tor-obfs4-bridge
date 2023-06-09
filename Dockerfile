@@ -2,7 +2,8 @@
 FROM docker.io/alpine:3.18.0
 
 ARG TOR_PACKAGE_VERSION=0.4.7.13-r2
-ARG OBFS4PROXY_PACKAGE_VERSION=0.0.14-r7
+# https://git.alpinelinux.org/aports/log/testing/obfs4proxy
+ARG OBFS4PROXY_PACKAGE_VERSION=0.0.14-r8
 RUN apk add --no-cache tor=$TOR_PACKAGE_VERSION \
     && apk add --no-cache obfs4proxy=$OBFS4PROXY_PACKAGE_VERSION \
         --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing
