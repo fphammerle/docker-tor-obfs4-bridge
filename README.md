@@ -1,6 +1,7 @@
 # docker: tor obfs4 bridge 🐳
 
-Tor bridge running obfs4 obfuscation protocol on Alpine
+Tor bridge running obfs4 obfuscation protocol via
+[lyrebird](https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/lyrebird) on Alpine
 
 Alpine port of https://dip.torproject.org/torproject/anti-censorship/docker-obfs4-bridge
 
@@ -24,7 +25,7 @@ when restarting the container
 additionally add `--read-only --tmpfs /tmp:rw,size=4k`
 to make the container's root filesystem read only
 
-verify status of bridge at  https://metrics.torproject.org/rs.html
+verify status of bridge at https://metrics.torproject.org/rs.html
 
 ## further reading
 

@@ -1,7 +1,7 @@
 IMAGE_NAME = docker.io/fphammerle/tor-obfs4-bridge
 PROJECT_VERSION = $(shell git describe --match=v* --abbrev=0 --dirty | sed -e 's/^v//')
 TOR_PACKAGE_VERSION = $(shell grep -Po 'TOR_PACKAGE_VERSION=\K.+' Dockerfile | tr -d -)
-OBFS4PROXY_PACKAGE_VERSION = $(shell grep -Po 'OBFS4PROXY_PACKAGE_VERSION=\K.+' Dockerfile | tr -d -)
+LYREBIRD_PACKAGE_VERSION = $(shell grep -Po 'LYREBIRD_PACKAGE_VERSION=\K.+' Dockerfile | tr -d -)
 ARCH = $(shell arch)
 # architecture[arm_variant]
 # https://github.com/opencontainers/image-spec/blob/v1.0.1/image-index.md#image-index-property-descriptions
@@ -10,7 +10,7 @@ IMAGE_TAG_ARCH_armv6l = armv6
 IMAGE_TAG_ARCH_armv7l = armv7
 IMAGE_TAG_ARCH_x86_64 = amd64
 IMAGE_TAG_ARCH = ${IMAGE_TAG_ARCH_${ARCH}}
-IMAGE_TAG = ${PROJECT_VERSION}-tor${TOR_PACKAGE_VERSION}-obfs4proxy${OBFS4PROXY_PACKAGE_VERSION}-${IMAGE_TAG_ARCH}
+IMAGE_TAG = ${PROJECT_VERSION}-tor${TOR_PACKAGE_VERSION}-lyrebird${LYREBIRD_PACKAGE_VERSION}-${IMAGE_TAG_ARCH}
 BUILD_PARAMS = --tag="${IMAGE_NAME}:${IMAGE_TAG}" \
 	--build-arg=REVISION="$(shell git rev-parse HEAD)"
 

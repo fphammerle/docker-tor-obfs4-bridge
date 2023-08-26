@@ -7,7 +7,7 @@ DataDirectory /var/lib/tor
 SOCKSPort 0
 
 BridgeRelay 1
-ServerTransportPlugin obfs4 exec /usr/bin/obfs4proxy
+ServerTransportPlugin obfs4 exec /usr/bin/lyrebird
 ExtORPort auto
 ORPort {OR_PORT}
 ServerTransportListenAddr obfs4 0.0.0.0:{PT_PORT}

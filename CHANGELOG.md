@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- replaced [obfs4proxy](https://web.archive.org/web/20230826165902/https://gitlab.com/yawning/obfs4)
+  with [lyrebird](https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/lyrebird)
+  (https://web.archive.org/web/20230826170256/https://gitlab.torproject.org/tpo/applications/tor-browser-build/-/issues/40869,
+  https://web.archive.org/web/20230826170258/https://forum.torproject.org/t/lyrebird-and-obfs4-development/8244)
 
 ## [1.1.0] - 2021-05-11
 ### Added
