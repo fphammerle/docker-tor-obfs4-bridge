@@ -1,7 +1,9 @@
 # https://pkgs.alpinelinux.org/packages?name=obfs4proxy&arch=x86_64
 FROM docker.io/alpine:3.18.2
 
-ARG TOR_PACKAGE_VERSION=0.4.7.13-r2
+# https://gitweb.torproject.org/tor.git/plain/ChangeLog
+# https://git.alpinelinux.org/aports/log/community/tor?h=3.18-stable
+ARG TOR_PACKAGE_VERSION=0.4.8.4-r0
 # https://git.alpinelinux.org/aports/log/testing/obfs4proxy
 ARG OBFS4PROXY_PACKAGE_VERSION=0.0.14-r9
 RUN apk add --no-cache tor=$TOR_PACKAGE_VERSION \
