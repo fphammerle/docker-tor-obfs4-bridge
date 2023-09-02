@@ -1,5 +1,5 @@
 # https://pkgs.alpinelinux.org/packages?name=lyrebird&arch=x86_64
-FROM docker.io/alpine:3.18.2
+FROM docker.io/alpine:3.18.3
 
 # https://gitweb.torproject.org/tor.git/plain/ChangeLog
 # https://git.alpinelinux.org/aports/log/community/tor?h=3.18-stable
