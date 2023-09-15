@@ -9,7 +9,7 @@ ARG TOR_PACKAGE_VERSION=0.4.8.5-r0
 # https://gitlab.com/yawning/obfs4/-/blob/master/ChangeLog
 # https://git.alpinelinux.org/aports/log/testing/obfs4proxy
 # https://git.alpinelinux.org/aports/commit/?id=08aa4bff0894ead479db96642aac67a4a0d1835
-ARG LYREBIRD_PACKAGE_VERSION=0.1.0-r0
+ARG LYREBIRD_PACKAGE_VERSION=0.1.0-r1
 RUN apk add --no-cache tor=$TOR_PACKAGE_VERSION \
     && apk add --no-cache lyrebird=$LYREBIRD_PACKAGE_VERSION \
         --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing
