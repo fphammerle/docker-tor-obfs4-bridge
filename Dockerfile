@@ -2,8 +2,9 @@
 FROM docker.io/alpine:3.18.3
 
 # https://gitweb.torproject.org/tor.git/plain/ChangeLog
+# https://gitlab.torproject.org/tpo/core/tor/-/raw/release-0.4.8/ReleaseNotes
 # https://git.alpinelinux.org/aports/log/community/tor?h=3.18-stable
-ARG TOR_PACKAGE_VERSION=0.4.8.5-r0
+ARG TOR_PACKAGE_VERSION=0.4.8.6-r0
 # https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/lyrebird/-/blob/main/ChangeLog
 # https://git.alpinelinux.org/aports/log/testing/lyrebird
 # https://gitlab.com/yawning/obfs4/-/blob/master/ChangeLog
